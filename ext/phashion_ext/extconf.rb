@@ -5,8 +5,8 @@ BUNDLE = Dir.glob("#{HERE}/pHash-*.tar.gz").first
 BUNDLE_PATH = BUNDLE.gsub(".tar.gz", "")
 $CFLAGS = " -x c++ #{ENV["CFLAGS"]}"
 $CFLAGS += " -fdeclspec" if RUBY_PLATFORM =~ /darwin/
-$includes = " -I#{HERE}/include"
-$libraries = " -L#{HERE}/lib -L/usr/local/lib"
+$includes = " -I#{HERE}/include -I/opt/homebrew/opt/jpeg/include"
+$libraries = " -L#{HERE}/lib -L/usr/local/lib -L/opt/homebrew/opt/jpeg/lib"
 $LIBPATH = ["#{HERE}/lib"]
 $CFLAGS = "#{$includes} #{$libraries} #{$CFLAGS}"
 $LDFLAGS = "#{$libraries} #{$LDFLAGS}"
