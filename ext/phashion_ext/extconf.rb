@@ -10,7 +10,7 @@ $libraries = " -L#{HERE}/lib -L/usr/local/lib -L/opt/homebrew/opt/jpeg/lib -L/op
 $LIBPATH = ["#{HERE}/lib"]
 $CFLAGS = "#{$includes} #{$libraries} #{$CFLAGS}"
 $LDFLAGS = "#{$libraries} #{$LDFLAGS}"
-$CXXFLAGS = ' -pthread'  
+$CXXFLAGS = ' -pthread'
 
 Dir.chdir(HERE) do
   if File.exist?("lib")
